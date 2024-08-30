@@ -1,6 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Reducing API Integration Time with Improved TypeScript SDK
 
 The liblab-generated TypeScript SDK enhances developer experience by reducing integration time, simplifying maintenance, and incorporating best practices. With the newest version 2, you'll experience significant improvements in validation, documentation, and code clarity. By focusing on minimal dependencies, specifically using Zod, this SDK enhances security and ensures that it remains reliable and easy to maintain. 
@@ -41,11 +38,11 @@ Version 2 provides more detailed information with each API request, including:
 
 - **Raw Data Access**: The V2 response also includes a raw property, allowing direct access to the raw binary data, providing more flexibility for advanced use cases.
 
-The following tabs present examples from the same function response from each TypeScript SDK generated with liblab.
+The following code blocks present examples from the same function response from each TypeScript SDK generated with liblab:
 
-<Tabs>
-  <TabItem value="v1" label="Version 1 (Old)" default>
-    ```json
+#### TypeScript V1 (old)
+
+```
       {
         sold: 1,
         string: 415,
@@ -59,10 +56,11 @@ The following tabs present examples from the same function response from each Ty
         awaiable: 1,
         peric: 26
       }
-      ```
-  </TabItem>
-  <TabItem value="v2" label="Version 2 (New)">
-    ```json
+```
+
+#### TypeScript V2 (new)
+
+ ```
       {
         metadata: {
           status: 200,
@@ -95,11 +93,8 @@ The following tabs present examples from the same function response from each Ty
           awaiable: 1,
           peric: 27
         }
-      }
-      
-      ```
-  </TabItem>
-</Tabs>
+      } 
+```
 
 The additional information makes it easier to debug and understand the operation being performed. As a result, developers have greater visibility into data flow and API behavior, enabling quicker identification of potential issues. 
 
