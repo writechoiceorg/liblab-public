@@ -1,18 +1,20 @@
 # Reducing API Integration Time with Improved TypeScript SDK
 
-The liblab-generated TypeScript SDK enhances developer experience by reducing integration time, simplifying maintenance, and incorporating best practices. With the newest version 2, you'll experience significant improvements in validation, documentation, and code clarity. By focusing on minimal dependencies, specifically using Zod, this SDK enhances security and ensures that it remains reliable and easy to maintain. 
+The liblab-generated TypeScript SDK enhances developer experience by reducing integration time, simplifying maintenance, and incorporating best practices. With liblab's newest Typescript SDK generator version 2, you'll experience significant improvements in validation, documentation, and code clarity. By focusing on minimal dependencies, specifically using Zod, this SDK enhances security and ensures that it remains reliable and easy to maintain. 
+
+The SDK leverages strict typing, ensuring type safety across the entire codebase, thus reducing runtime errors. It follows a modular architecture to keep code maintainable and scalable, and makes extensive use of TypeScript’s generics to provide reusable and flexible components. Additionally, the SDK employs union types and type guards to handle complex data structures more effectively, while avoiding any type issues. This attention to TypeScript best practices not only boosts developer productivity but also improves the overall quality and stability of the integration.
 
 ## Key Features of liblab's TypeScript SDK
 
-- **Automatic SDK Generation:** With liblab, you can automatically generate a TypeScript SDK for your API. This automation saves you time and effort, allowing you to focus on building your application rather than developing an SDK from scratch.
+- **Automatic SDK Generation**: With liblab, you can automatically generate a TypeScript SDK for your API. This automation saves you time and effort, allowing you to focus on building your application rather than developing an SDK from scratch.
 
-- **Integrated Documentation:** The SDK comes with integrated documentation, making it easier for developers to understand how to use the API. This reduces the time needed to learn how to integrate the API so your customers can get started quickly. In version 1, the documentation was part of the README file, with all classes and functions. Version 2 improved on that. Now, each service and model has its own documentation, which is better organized and cleaner for the end-user.
+- **Integrated Documentation**: The SDK comes with integrated documentation, making it easier for developers to understand how to use the API. This reduces the time needed to learn how to integrate the API so your customers can get started quickly. In version 1, the documentation was part of the README file, with all classes and functions, with code snippets included. Version 2 improved on that. Now, each service and model has its own documentation, which is better organized and cleaner.
 
-- **Simplified Maintenance:** When your API updates, the SDK updates too. This automatic synchronization prevents compatibility issues and makes maintenance much easier and faster. In addition, every time the SDK is generated, the documentation is automatically updated, keeping everything in sync. 
+- **Simplified Maintenance**: You can use [liblab’s github actions to incorporate SKD updates into your CI/CD pipeline](https://developers.liblab.com/cli/cli-overview). This way, every API change is synchronized with your SDK and documentation automatically. This automatic synchronization prevents compatibility issues and makes maintenance much easier and faster.
 
-- **Error Reduction:** Because the SDK is automatically generated based on your API's specification, there’s a lower risk of common errors that can occur with manual implementations, including typos and incorrectly handling return calls.
+- **Error Reduction**: Because the SDK is automatically generated based on your API's specification, there’s a lower risk of common errors that can occur with manual implementations, including type safety and incorrectly handling return calls, resulting in less errors from the end user.
 
-- **Faster Integration:** A well-documented and tested SDK means you can integrate the API functionalities into your projects quickly without worrying about the implementation details.
+- **Faster Integration**: A well-documented and tested SDK means you can integrate the API functionalities into your projects quickly without worrying about the implementation details. The generated documentation, along with the README file with code snippets, providing end users with a easy to use example to start integrating.
 
 ## What’s New in Version 2?
 
@@ -26,7 +28,7 @@ liblab’s TypeScript SDK V2 introduces Zod, a powerful library for validation a
 
 - **Enhanced Security and Reliability:** Zod enforces strict input validation and type safety, helping you avoid common security issues like injection attacks.
 
-- **Avoidance of Supply Chain Attacks:** Relying on a single, well-maintained dependency like Zod significantly reduces the risk of supply chain attacks compared to using multiple third-party packages. 
+- **Avoidance of Supply Chain Attacks:** Relying on a single, well-maintained dependency like Zod significantly reduces the risk of supply chain attacks compared to using multiple third-party packages. Supply chain attacks, as the name says, are attacks seeking vulnerabilities in third party software. Most victims aren't aware of it. Requiring a single dependency only reduces the possible area for attacks, becoming easier to monitor and track possible weak points outside the code. 
 
 ### Enhanced Information with Each API Request
 
@@ -37,6 +39,10 @@ Version 2 provides more detailed information with each API request, including:
 - **Organized Response Structure**: The V2 response separates the content into data and metadata, making it easier to access information and enhancing the overall response readability.
 
 - **Raw Data Access**: The V2 response also includes a raw property, allowing direct access to the raw binary data, providing more flexibility for advanced use cases.
+
+:::info Default Version
+Version 2 is the default version in the config file. If you want to generate the SDK in version 1 you can explicitly change it version 1 in config file before generating the SDK.
+:::
 
 The following code blocks present examples from the same function response from each TypeScript SDK generated with liblab:
 
@@ -96,7 +102,7 @@ The following code blocks present examples from the same function response from 
       } 
 ```
 
-The additional information makes it easier to debug and understand the operation being performed. As a result, developers have greater visibility into data flow and API behavior, enabling quicker identification of potential issues. 
+The additional information makes it easier to debug and understand the operation being performed. As a result, developers have greater visibility into data flow and API behavior, enabling quicker identification of potential issues.
 
 ### Automatic Documentation Generation
 
@@ -234,7 +240,7 @@ You can use the auto-generated SDK documentation to give your SDK users a comple
 
 ## Benefits for End-Users
 
-The enhancements in Liblab's TypeScript SDK V2 make life easier for developers and deliver tangible benefits for end-users. This SDK helps ensure that your applications are reliable and responsive to the user's needs. Because the SDK simplifies and speeds up the integration process, developers can roll out new features more quickly. This keeps your application fresh and aligned with user expectations, enhancing overall user satisfaction.
+The enhancements in liblab's TypeScript SDK V2 make life easier for developers and deliver tangible benefits for end-users. This SDK helps ensure that your applications are reliable and responsive to the user's needs. Because the SDK simplifies and speeds up the integration process, developers can roll out new features faster. This keeps your application always updated and aligned with user expectations, enhancing overall user satisfaction.
 
 ## Conclusion
 
